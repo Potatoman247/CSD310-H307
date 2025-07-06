@@ -1,7 +1,9 @@
+import dotenv # to use .env file
+from dotenv import load_dotenv
 import mysql.connector # to connect
 from mysql.connector import errorcode
 
-import dotenv # to use .env file
+load_dotenv('C:/csd/csd310-h307/module-6/')
 from dotenv import dotenv_values
 
 secrets = dotenv_values(".env")
