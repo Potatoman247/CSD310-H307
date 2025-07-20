@@ -5,10 +5,8 @@
 """ import statements """
 import mysql.connector  # to connect
 from mysql.connector import errorcode
-'''
-import dotenv
-from dotenv import dotenv_values
 
+from dotenv import dotenv_values
 
 #using our .env file
 secrets = dotenv_values(".env")
@@ -21,7 +19,7 @@ config = {
     "database": secrets["DATABASE"],
     "raise_on_warnings": True #not in .env file
 }
-'''
+
 # List of tables to query
 tables = [
     "Department",
@@ -39,8 +37,7 @@ tables = [
 
 try:
     # Connect to the database
-    db = mysql.connector.connect(host='localhost', user='winery_user',password='grapes', database='winery')
-    # db = mysql.connector.connect(**config)
+    db = mysql.connector.connect(**config)
     cursor = db.cursor()
 
     # Loop through tables and display contents
